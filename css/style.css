@@ -9,6 +9,13 @@ img {
  ul {
    margin: 0;
  }
+ h1,
+ h2,
+ h3,
+ h4 {
+   margin: 0;
+   padding: 0;
+ }
 
 
 /* =======    main wrapper    ======= */
@@ -62,6 +69,7 @@ img {
   justify-content: flex-end;
   align-items: center;
   padding: 20px;
+  background-color: #090909;
 }
 
 
@@ -71,6 +79,7 @@ img {
   flex-flow: row wrap;
   height: calc(86vh - 70px);
   overflow: auto;
+  background-color: #121212;
 }
 
 .suggested-music ul {
@@ -105,7 +114,7 @@ img {
 
 
 
-.thumbnail {
+.thumbnail img {
   width: 200px;
   height: 200px;
 }
@@ -115,14 +124,46 @@ img {
 /* secondary */
 .secondary-wrapper {
   display: flex;
-  height: 160px;
-  background-color: magenta;
+  width: 100vw;
+  height: 130px;
+  background-color: #282828;
   position: fixed;
   bottom: 0;
 }
 
+.track-infos {
+  display:flex;
+  flex-flow: row wrap;
+  align-items: center;
+  flex-basis: calc((100vw / 3) * 1);
+}
 
 
+.track-infos img {
+  width: 80px;
+  height: 80px;
+  margin: 0 8px 0 15px;
+}
+
+.reference{
+  margin-right: 30px;
+}
+
+
+.player {
+  display: flex;
+  flex-flow: column wrap;
+  flex-basis: calc((100vw / 3) * 1);
+  justify-content: center;
+  align-items: center;
+}
+
+.controller {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  width: 60%;
+}
 
 
 
