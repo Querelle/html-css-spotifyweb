@@ -1,5 +1,6 @@
 body {
   font-family: 'Roboto', sans-serif;
+  color: #FFF;
 }
 
 img {
@@ -7,46 +8,47 @@ img {
 }
 
 
-/* =======    root    ======= */
-.root {
+/* =======    main wrapper    ======= */
+.main-wrapper {
   display: flex;
   background-color: #000;
-  flex-basis: 100vw;
+  flex-basis: calc(100vw - 280px);
 }
 
 
-/* =======    navigation menu    ======= */
+/* =======    navigation column    ======= */
 .nav-column {
   flex: none;
   width: 280px;
   height: 86vh;
   background-color: rgba(0, 0, 0, .5);
-  color: #FFF;
+  padding-left: 20px;
 }
 
-/* =======    find menu    ======= */
+
+/* =======    main container    ======= */
 .main-container {
   display: flex;
   flex-flow: row wrap;
-  flex-basis: calc(100vw - 300px);
   height: 86vh;
   align-content: flex-start;
 }
 
-.upgrade-wrapper {
+
+/* =======    upgrade bar    ======= */
+.upgrade-bar {
   display: flex;
-  flex-basis: calc(100vw - 300px);
+  flex-basis: calc(100vw - 280px);
   height: 70px;
   justify-content: flex-end;
   align-items: center;
+  padding: 20px;
 }
 
 
 /* =======    suggested playlist    ======= */
-
 .suggested-music {
   display: flex;
-  flex-basis: calc(100vw - 310px);
   flex-flow: row wrap;
   height: calc(86vh - 70px);
   overflow: auto;
@@ -57,41 +59,32 @@ img {
   flex-flow: row nowrap;
   justify-content: center;
   flex-basis: calc(100vw - 310px);
-  width: 85vw;
-  color: #FFF;
   text-transform: uppercase;
-
 }
-
 
 .recently-played {
   display: flex;
   flex-basis: 85vw;
   flex-flow: row wrap;
-  justify-content: space-around;
-  padding: 0 200px;
-
+  justify-content: flex-start;
 }
 
 .play-items {
   display: flex;
-  flex-basis: 85vw;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: flex-start;
   padding: 20px;
+
 }
 
-.flex-list li {
-  text-align: center;
-  width: 200px;
-  color: #FFF;
-  height: 200px;
+.play-items li {
+  margin: 15px;
 }
 
 
 
 
-.thumbX {
+.thumbnail {
   width: 200px;
   height: 200px;
 }
