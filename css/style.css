@@ -1,0 +1,116 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+img {
+  width: 100px;
+}
+
+
+/* =======    root    ======= */
+.root {
+  display: flex;
+  background-color: #000;
+  flex-basis: 100vw;
+}
+
+
+/* =======    navigation menu    ======= */
+.nav-column {
+  flex: none;
+  width: 280px;
+  height: 86vh;
+  background-color: rgba(0, 0, 0, .5);
+  color: #FFF;
+}
+
+/* =======    find menu    ======= */
+.main-container {
+  display: flex;
+  flex-flow: row wrap;
+  flex-basis: calc(100vw - 300px);
+  height: 86vh;
+  align-content: flex-start;
+}
+
+.upgrade-wrapper {
+  display: flex;
+  flex-basis: calc(100vw - 300px);
+  height: 70px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+
+/* =======    suggested playlist    ======= */
+
+.suggested-music {
+  display: flex;
+  flex-basis: calc(100vw - 310px);
+  flex-flow: row wrap;
+  height: calc(86vh - 70px);
+  overflow: auto;
+}
+
+.nav-playlist {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  flex-basis: calc(100vw - 310px);
+  width: 85vw;
+  color: #FFF;
+  text-transform: uppercase;
+
+}
+
+
+.recently-played {
+  display: flex;
+  flex-basis: 85vw;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding: 0 200px;
+
+}
+
+.play-items {
+  display: flex;
+  flex-basis: 85vw;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.flex-list li {
+  text-align: center;
+  width: 200px;
+  color: #FFF;
+  height: 200px;
+}
+
+
+
+
+.thumbX {
+  width: 200px;
+  height: 200px;
+}
+
+.thumbX img {
+  width: 100%;
+  filter: sepia(100%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =======    THE END    ======= */
