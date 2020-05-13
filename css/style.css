@@ -123,9 +123,36 @@ img {
   margin: 0 15px;
 }
 
+.thumbnail {
+  position: relative;
+  color: rgba(0, 0, 0, 0);
+}
+
+.overlay:hover {
+  background-color: rgba(0, 0, 0, .5);
+  color: #FFF;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  width: 200px;
+  height: 200px;
+  z-index: 2;
+}
+.overlay .fa-play-circle{
+  color: inherit;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3em;
+
+}
 .thumbnail img {
   width: 200px;
   height: 200px;
+  position: relative;
 }
 
 
