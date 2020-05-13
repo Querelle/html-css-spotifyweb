@@ -35,6 +35,28 @@ img {
   height: 100%;
   width: 310px;
 }
+[class*="af_"]::after {
+  font: inherit;
+  font-weight: 400;
+}
+.af_cerca::after {
+  content: " Cerca";
+}
+
+.af_home::after {
+  content: " Home";
+}
+
+.af_libreria::after {
+  content: " La tua libreria";
+}
+
+.af_installa::after {
+  content: " Installa App";
+}
+.af_username::after {
+  content: " Querelle";
+}
 
 .nav-column li {
   padding-top: 15px;
@@ -45,8 +67,10 @@ img {
   padding: 20px 0;
 }
 
+.logo-piccolo
+
 .playlists-wrap {
-  height: calc(100% - 320px);
+  height: calc(100% - 340px);
 }
 
 .playlists {
@@ -70,13 +94,15 @@ img {
 
 /* =======    upgrade bar    ======= */
 .upgrade-bar {
+  position: fixed;
+  top: 0;
   display: flex;
-  flex-basis: 100%;
+  width: calc(100% - 310px);
   height: 70px;
   justify-content: flex-end;
   align-items: center;
   padding: 20px;
-  background-color: #090909;
+  background-color: rgba(0, 0, 0, .5);
 }
 
 .upgrade-bar button {
@@ -94,6 +120,7 @@ img {
   height: calc(86vh - 70px);
   overflow: auto;
   background-color: #121212;
+  padding-top: 80px;
 }
 
 .category-music h2 {
@@ -199,6 +226,25 @@ img {
 }
 
 
+@media screen and (max-width: 990px) {
+  [class*="af_"]::after {
+    content: "";
+  }
+  .playlists-wrap,
+  .logo-grande,
+  .nav-column hr {
+    display: none;
+  }
 
+  .logo,
+  .user img {
+    width: 20px;
+  }
+
+  .nav-column {
+    width: 50px;
+    padding: 10px 15px;
+  }
+}
 
 /* =======    THE END    ======= */
