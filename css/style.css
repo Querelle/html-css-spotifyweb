@@ -67,7 +67,9 @@ img {
   padding: 20px 0;
 }
 
-.logo-piccolo
+.logo-piccolo {
+  display: none;
+}
 
 .playlists-wrap {
   height: calc(100% - 340px);
@@ -117,7 +119,7 @@ img {
 .category-music {
   display: flex;
   flex-flow: row wrap;
-  height: calc(86vh - 70px);
+  height: 100%;
   overflow: auto;
   background-color: #121212;
   padding-top: 80px;
@@ -235,10 +237,14 @@ img {
   .nav-column hr {
     display: none;
   }
+  .logo-piccolo {
+    display: block;
+  }
 
   .logo,
   .user img {
     width: 20px;
+    margin-left: -2px;
   }
 
   .nav-column {
