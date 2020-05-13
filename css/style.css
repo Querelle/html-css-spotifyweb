@@ -136,7 +136,7 @@ su piccoli dispositivi    ======= */
   display: flex;
   flex-flow: row wrap;
   align-content: flex-start;
-  flex-basis: calc(100vw - 310px);
+  width: calc(100vw - 310px);
 }
 
 
@@ -327,7 +327,11 @@ su piccoli dispositivi    ======= */
 
   .upgrade-bar,
   .main-container {
-    flex-basis: calc(100vw - 50px);
+    width: calc(100vw - 50px);
+  }
+
+  .home-menu li {
+    padding-left: 0;
   }
 }
 
