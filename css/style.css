@@ -1,7 +1,6 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  /* font-family: 'Baloo 2', cursive; */
   color: #FFF;
   font-weight: 500;
   font-size: 0.9em;
@@ -21,13 +20,14 @@ h2 {
 }
 
 h3 {
-  font-size: 1.4em;
+  font-size: 1.2em;
 }
 
 p,
 li,
 h4 {
   color: grey;
+  font-size: 0.9em;
 }
 
 img {
@@ -71,6 +71,10 @@ ul {
 
 .home-menu li:hover {
   border-left: 3px solid #35e721;
+}
+
+.nav-column li:hover,
+.user p:hover {
   color: #FFF;
 }
 
@@ -83,11 +87,14 @@ ul {
   overflow: hidden;
 }
 
-.fa-plus-square {
+/* .fa-plus {
+  display: inline-block;
+  background-color: lightgrey;
   font-size: 3em;
   padding-right: 5px;
   vertical-align: sub;
-}
+
+} */
 
 .playlists {
   overflow: auto;
@@ -105,7 +112,7 @@ ul {
 /* =======    ::after testo display:none
 su piccoli dispositivi    ======= */
 [class*="af_"]::after {
-  font: inherit;
+  font-family: 'Roboto', sans-serif;
   font-weight: 400;
 }
 
@@ -151,6 +158,7 @@ su piccoli dispositivi    ======= */
   align-items: center;
   padding: 20px;
   background-color: rgba(0, 0, 0, .5);
+  z-index: 1;
 }
 
 .upgrade-bar button {
@@ -159,6 +167,10 @@ su piccoli dispositivi    ======= */
   border-radius: 100px;
   text-transform: uppercase;
   font-size: .8em;
+}
+
+.upgrade-bar button:hover {
+  padding: 10px 22px;
 }
 
 
@@ -173,8 +185,12 @@ su piccoli dispositivi    ======= */
   width: 100%;
 }
 
-.category-music h2 {
+.text-description {
   padding-left: 35px;
+}
+
+.text-description h3 {
+  color: grey;
 }
 
 .category-music ul {
@@ -203,7 +219,7 @@ su piccoli dispositivi    ======= */
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
-  padding: 20px;
+  padding: 0 20px 20px 20px;
   text-align: center;
 }
 
@@ -212,8 +228,8 @@ su piccoli dispositivi    ======= */
 }
 
 .thumbnail {
-  position: relative;
   color: rgba(0, 0, 0, 0);
+  position: relative;
 }
 
 .overlay:hover {
@@ -226,7 +242,6 @@ su piccoli dispositivi    ======= */
   top: 0;
   width: 200px;
   height: 200px;
-  z-index: 2;
   border-radius: inherit;
 }
 
@@ -242,7 +257,6 @@ su piccoli dispositivi    ======= */
 .thumbnail img {
   width: 200px;
   height: 200px;
-  position: relative;
 }
 
 .coll-far img {
@@ -281,7 +295,7 @@ su piccoli dispositivi    ======= */
 
 .player {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   flex-basis: calc((100vw / 3) * 1);
   justify-content: center;
   align-items: center;
@@ -300,16 +314,42 @@ su piccoli dispositivi    ======= */
   justify-content: space-between;
 }
 
+/* .playing-bar {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  position: relative;
+  justify-content: space-between;
+}
+
+.player .inizio::after {
+  content: "";
+  display: inline-block;
+  width: 50px;
+  border: 2px solid #FFF;
+  vertical-align: middle;
+}
+
+.player .fine::before {
+  content: "";
+  display: inline-block;
+  width: 250px;
+  border: 2px solid grey;
+  vertical-align: middle;
+} */
+
 
 @media screen and (max-width: 990px) {
   [class*="af_"]::after {
     content: "";
   }
+
   .playlists-wrap,
   .logo-grande,
   .nav-column hr {
     display: none;
   }
+
   .logo-piccolo {
     display: block;
   }
