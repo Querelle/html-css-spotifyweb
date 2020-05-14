@@ -56,6 +56,10 @@ ul {
   width: 310px;
 }
 
+.top-column {
+  height: calc(100vh - 200px);
+}
+
 .nav-column li {
   padding: 7px;
 }
@@ -74,31 +78,39 @@ ul {
 }
 
 .nav-column li:hover,
-.user p:hover {
+.user p:hover
+.plus-wraper:hover {
   color: #FFF;
+}
+.plus-wraper:hover .plus_playlist {
+  background-color: #FFF;
 }
 
 
 /* =======    playlist    ======= */
 .playlists-wrap {
   padding: 20px 0;
-  height: calc(100% - 294px);
+  height: calc(100% - 200px);
   color: grey;
   overflow: hidden;
 }
 
-/* .fa-plus {
+.fa-plus {
   display: inline-block;
-  background-color: lightgrey;
   font-size: 3em;
-  padding-right: 5px;
-  vertical-align: sub;
-
-} */
+  vertical-align: middle;
+}
+.plus_playlist {
+  background-color: grey;
+  padding: 10px 12px;
+  display: inline-block;
+  color: #000;
+  margin: 15px 15px 15px 0;
+}
 
 .playlists {
   overflow: auto;
-  height: 80%;
+  height: 85%;
 }
 
 
@@ -225,11 +237,14 @@ su piccoli dispositivi    ======= */
 
 .play-items li {
   margin: 18px 14px;
+  width: calc((100% / 6) * 1);
 }
 
 .thumbnail {
   color: rgba(0, 0, 0, 0);
   position: relative;
+  max-width: 200px;
+  max-height: 200px;
 }
 
 .overlay:hover {
@@ -240,8 +255,8 @@ su piccoli dispositivi    ======= */
 .overlay {
   position: absolute;
   top: 0;
-  width: 200px;
-  height: 200px;
+  width: 100%;
+  height: 100%;
   border-radius: inherit;
 }
 
@@ -252,11 +267,6 @@ su piccoli dispositivi    ======= */
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 3em;
-}
-
-.thumbnail img {
-  width: 200px;
-  height: 200px;
 }
 
 .coll-far img {
@@ -379,6 +389,7 @@ su piccoli dispositivi    ======= */
 .volume-set .fas {
   margin-right: 10px;
 }
+
 @media screen and (max-width: 990px) {
   [class*="af_"]::after {
     content: "";
@@ -390,14 +401,14 @@ su piccoli dispositivi    ======= */
     display: none;
   }
 
-  .logo-piccolo {
-    display: block;
-  }
-
   .logo,
   .user img {
     width: 20px;
     margin-left: -2px;
+  }
+
+  .logo-piccolo {
+    display: block;
   }
 
   .nav-column {
@@ -412,6 +423,22 @@ su piccoli dispositivi    ======= */
 
   .home-menu li {
     padding-left: 0;
+  }
+
+  .play-items li {
+    margin: 18px 14px;
+    width: calc((100% / 3) * 1);
+  }
+
+  .top-column {
+    height: calc(100vh - 200px);
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .play-items li {
+    margin: 18px 14px;
+    width: calc((100% / 4) * 1);
   }
 }
 
