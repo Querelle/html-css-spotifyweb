@@ -217,6 +217,7 @@ su piccoli dispositivi    ======= */
   width: 100%;
 }
 
+/* =======    collection    ======= */
 .text-description {
   padding-left: 35px;
 }
@@ -298,7 +299,7 @@ su piccoli dispositivi    ======= */
 }
 
 
-/* secondary */
+/* =======    secondary    ======= */
 .secondary-wrapper {
   display: flex;
   width: 100vw;
@@ -355,9 +356,8 @@ su piccoli dispositivi    ======= */
   width: 100%;
 }
 
-.playing-bar .green-bar {
+.green-bar {
   display: inline-block;
-  width: 10%;
   height: 0;
   border: 2px solid #FFF;
   vertical-align: middle;
@@ -365,13 +365,21 @@ su piccoli dispositivi    ======= */
   position: relative;
 }
 
-.playing-bar .grey-bar {
+.grey-bar {
   display: inline-block;
   width: 70%;
   height: 0;
   border: 2px solid grey;
   vertical-align: middle;
   margin-right: 10px;
+}
+
+.playing-bar .green-bar {
+  width: 10%;
+}
+
+.playing-bar .grey-bar {
+  width: 70%;
 }
 
 .fa-play-circle {
@@ -390,22 +398,12 @@ su piccoli dispositivi    ======= */
   justify-content: flex-end;
 }
 
-.volume-set .green-bar {
-  display: inline-block;
+.green-bar {
   width: 10%;
-  height: 0;
-  border: 2px solid #FFF;
-  vertical-align: middle;
-  position: relative;
 }
 
-.volume-set .grey-bar {
-  display: inline-block;
+.grey-bar {
   width: 60%;
-  height: 0;
-  border: 2px solid grey;
-  vertical-align: middle;
-  margin-right: 15px;
 }
 
 .volume-set .fas {
@@ -415,6 +413,7 @@ su piccoli dispositivi    ======= */
 .position-bar {
   width: 20%;
 }
+
 .pallino {
   display: inline-block;
   width: 10px;
@@ -433,6 +432,10 @@ su piccoli dispositivi    ======= */
 .position-bar:hover .green-bar {
   border-color: rgb(96, 245, 66);
 }
+
+
+
+/* =======    screen sm    ======= */
 @media screen and (max-width: 990px) {
   [class*="af_"]::after {
     content: "";
@@ -476,8 +479,14 @@ su piccoli dispositivi    ======= */
   .top-column {
     height: calc(100vh - 200px);
   }
+  
+  .bookmark {
+    display: none;
+  }
 }
 
+
+/* =======    screen md    ======= */
 @media screen and (max-width: 1199px) {
   .play-items li {
     margin: 18px 14px;
