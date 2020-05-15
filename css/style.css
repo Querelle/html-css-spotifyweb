@@ -38,6 +38,14 @@ ul {
   margin: 0;
 }
 
+button {
+  background-color: transparent;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+}
+
 .unstyled-list {
   list-style: none;
 }
