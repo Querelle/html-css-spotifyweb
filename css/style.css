@@ -38,6 +38,18 @@ ul {
   margin: 0;
 }
 
+.unstyled-list {
+  list-style: none;
+}
+
+.inline-list > li {
+  display: inline-block;
+  padding-right: 8px;
+}
+
+.inline-list {
+  list-style: none;
+}
 
 /* =======    main wrapper    ======= */
 .primary-wrapper {
@@ -78,7 +90,7 @@ ul {
 }
 
 .nav-column li:hover,
-.user p:hover
+.user p:hover,
 .plus-wraper:hover {
   color: #FFF;
 }
