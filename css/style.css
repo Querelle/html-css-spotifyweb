@@ -342,6 +342,7 @@ su piccoli dispositivi    ======= */
   border: 2px solid #FFF;
   vertical-align: middle;
   margin-left: 10px;
+  position: relative;
 }
 
 .playing-bar .grey-bar {
@@ -371,15 +372,16 @@ su piccoli dispositivi    ======= */
 
 .volume-set .green-bar {
   display: inline-block;
-  width: 5%;
+  width: 10%;
   height: 0;
   border: 2px solid #FFF;
   vertical-align: middle;
+  position: relative;
 }
 
 .volume-set .grey-bar {
   display: inline-block;
-  width: 20%;
+  width: 60%;
   height: 0;
   border: 2px solid grey;
   vertical-align: middle;
@@ -390,6 +392,27 @@ su piccoli dispositivi    ======= */
   margin-right: 10px;
 }
 
+.position-bar {
+  width: 20%;
+}
+.pallino {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 100px;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+}
+
+.position-bar:hover .pallino {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.position-bar:hover .green-bar {
+  border-color: rgb(96, 245, 66);
+}
 @media screen and (max-width: 990px) {
   [class*="af_"]::after {
     content: "";
