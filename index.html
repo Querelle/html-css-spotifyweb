@@ -15,9 +15,9 @@
 
     <main>
 
-      <section class="primary-wrapper">
+      <section class="top-wrapper">
         <!-- ======    navigation column    ====== -->
-        <section class="nav-column">
+        <section class="navigation-column">
           <div class="top-column">
             <div class="logo">
               <img class="logo-piccolo"src="img/logo-small.svg" alt="">
@@ -25,23 +25,23 @@
             </div>
 
             <nav class="unstyled-list home-menu">
-              <li><i class="fas fa-search af_cerca"></i></li>
-              <li><i class="fas fa-home af_home"></i></li>
-              <li><i class="fas fa-compact-disc af_libreria"></i></li>
+              <li><i class="fas fa-search after_cerca"></i></li>
+              <li><i class="fas fa-home after_home"></i></li>
+              <li><i class="fas fa-compact-disc after_libreria"></i></li>
             </nav>
 
             <!-- ======    playlists    ====== -->
-            <nav class="playlists-wrap">
+            <nav class="playlists-container">
               <h2 id="new-title">Playlists</h2>
               <div class="plus-wraper">
-                <span class="plus_playlist"><i class="fas fa-plus"></i></span>
+                <span class="plus-item"><i class="fas fa-plus"></i></span>
                 Crea Playlist
               </div>
-              <ul class="unstyled-list playlists">
+              <ul class="unstyled-list personal-playlists">
                 <li>Nos Dará Alas</li>
                 <li>Nos Dará Alas</li>
-                <li>Questo è un titolo molto, molto, molto lungo!</li>
-                <li>Nos Dará Alase</li>
+                <li>Nos Dará Alas</li>
+                <li>Nos Dará Alas</li>
                 <li>Nos Dará Alas</li>
                 <li>Nos Dará Alas</li>
                 <li>Nos Dará Alas</li>
@@ -51,24 +51,24 @@
 
           <!-- ======    user    ====== -->
           <div class="user">
-            <p><i class="fas fa-arrow-circle-down af_installa"></i></p>
+            <p><i class="fas fa-arrow-circle-down after_installa"></i></p>
             <hr>
-            <p class="af_username"><img src="img/profilo.jpg" alt=""></p>
+            <p class="after_username"><img src="img/profilo.jpg" alt="foto profilo dell'utente"></p>
           </div>
         </section>
 
 
-        <!-- ======    main-container    ====== -->
-        <section class="main-container">
+        <!-- ======    main-section    ====== -->
+        <section class="main-section">
           <!-- ======    upgrade bar    ====== -->
           <div class="upgrade-bar">
             <button>Effettua l'upgrade</button>
           </div>
 
 
-          <!-- ======    category    ====== -->
-          <section class="category-music">
-            <nav class="nav-category">
+          <!-- ======    categories    ====== -->
+          <section class="categories">
+            <nav class="nav-selector">
               <ul class="inline-list">
                 <li>In evidenza</li>
                 <li>Podcast</li>
@@ -80,15 +80,15 @@
 
 
             <!-- ======    collection    ====== -->
-            <div class="collections-wrap">
+            <div class="collections-wraper">
 
-              <div class="collection coll-recently">
-                <div class="text-description">
+              <div class="collection recently">
+                <div class="description">
                   <h2>Recently played</h2>
                   <h3>E non t'hanno ancora scocciato?</h3>
                 </div>
 
-                <ul class="unstyled-list play-items">
+                <ul class="unstyled-list collection-items">
                   <li>
                     <div class="thumbnail">
                       <img src="img/slow.jpg" alt="">
@@ -156,12 +156,12 @@
               </div>
 
 
-            <div class="collection coll-far">
-              <div class="text-description">
+            <div class="collection far-away">
+              <div class="description">
                 <h2>Long time ago in a galaxy far far away... played</h2>
                 <h3>Sbrighiamoci</h3>
               </div>
-              <ul class="unstyled-list play-items coll-far">
+              <ul class="unstyled-list collection-items">
                 <li>
                   <div class="thumbnail">
                     <div class="overlay">
@@ -205,12 +205,12 @@
             </div>
 
 
-            <div class="collection coll-mixed">
-              <div class="text-description">
+            <div class="collection miscellaneous">
+              <div class="description">
                 <h2>Piaciuto?</h2>
                 <h3>non ti ci abituare</h3>
               </div>
-              <ul class="unstyled-list play-items ">
+              <ul class="unstyled-list collection-items ">
                 <li>
                   <div class="thumbnail">
                     <div class="overlay">
@@ -257,14 +257,14 @@
       </section>
     </section>
       <!-- ======    playing track    ====== -->
-      <section class="secondary-wrapper">
-        <div class="track-infos">
+      <section class="bottom-wrapper">
+        <div class="track-playing">
           <img src="img/gorillaz.jpeg" alt="">
           <div class="reference">
             <h3>Scimmiaz</h2>
             <h4>Dune</h4>
           </div>
-          <div class="bookmark">
+          <div class="bookmarks">
             <i class="far fa-heart"></i>
             <i class="far fa-folder"></i>
           </div>
@@ -279,8 +279,8 @@
             <i class="fas fa-step-forward"></i>
             <i class="fas fa-redo"></i>
           </div>
-          <div class="playing-bar">
-            <p>0:30 <span class="position-bar"><span class="green-bar"><span class="pallino"></span></span><span class="grey-bar"></span></span>2:30</p>
+          <div class="bar-wrapper">
+            <p>0:30 <span class="bar-container"><span class="green-bar"><span class="pallino"></span></span><span class="grey-bar"></span></span>2:30</p>
           </div>
         </div>
 
@@ -290,7 +290,7 @@
             <i class="fas fa-sliders-h"></i>
             <i class="fas fa-tv"></i>
             <i class="fas fa-volume-up"></i>
-            <span class="position-bar">
+            <span class="bar-container">
             <span class="green-bar"><span class="pallino"></span></span><span class="grey-bar"></span>
             </span>
           </div>

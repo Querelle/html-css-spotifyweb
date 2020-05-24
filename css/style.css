@@ -1,4 +1,4 @@
-
+/* =======    ELEMENTI GENERALI    ======= */
 body {
   font-family: 'Roboto', sans-serif;
   color: #FFF;
@@ -46,6 +46,8 @@ button {
   letter-spacing: inherit;
 }
 
+
+/* =======    classi generiche    ======= */
 .unstyled-list {
   list-style: none;
 }
@@ -59,8 +61,9 @@ button {
   list-style: none;
 }
 
-/* =======    main wrapper    ======= */
-.primary-wrapper {
+
+/* =======    top wrapper    ======= */
+.top-wrapper {
   display: flex;
   background-color: #000;
   height: calc(100vh - 100px);  /*100px altezza del footer*/
@@ -68,8 +71,8 @@ button {
 }
 
 
-/* =======    navigation column    ======= */
-.nav-column {
+/* =======    top navigation column    ======= */
+.navigation-column {
   background-color: rgba(0, 0, 0, .5);
   padding: 0 20px;
   height: 100%;
@@ -80,7 +83,7 @@ button {
   height: calc(100vh - 200px);
 }
 
-.nav-column li {
+.navigation-column li {
   padding: 7px;
 }
 
@@ -97,18 +100,18 @@ button {
   border-left: 3px solid #35e721;
 }
 
-.nav-column li:hover,
+.navigation-column li:hover,
 .user p:hover,
 .plus-wraper:hover {
   color: #FFF;
 }
-.plus-wraper:hover .plus_playlist {
+.plus-wraper:hover .plus-item {
   background-color: #FFF;
 }
 
 
 /* =======    playlist    ======= */
-.playlists-wrap {
+.playlists-container {
   padding: 20px 0;
   height: calc(100% - 200px);
   color: grey;
@@ -120,7 +123,7 @@ button {
   font-size: 3em;
   vertical-align: middle;
 }
-.plus_playlist {
+.plus-item {
   background-color: grey;
   padding: 10px 12px;
   display: inline-block;
@@ -128,50 +131,50 @@ button {
   margin: 15px 15px 15px 0;
 }
 
-.playlists {
+.personal-playlists {
   overflow: auto;
   height: 85%;
 }
 
 
-/* =======    user sidebar    ======= */
+/* =======    bottom navigation column    ======= */
 .user img {
   width: 30px;
   border-radius: 100%;
 }
 
 
-/* =======    ::after testo display:none
+/* =======    ::after display:none
 su piccoli dispositivi    ======= */
-[class*="af_"]::after {
+[class*="after_"]::after {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
 }
 
-.af_cerca::after {
+.after_cerca::after {
   content: " Cerca";
 }
 
-.af_home::after {
+.after_home::after {
   content: " Home";
 }
 
-.af_libreria::after {
+.after_libreria::after {
   content: " La tua libreria";
 }
 
-.af_installa::after {
+.after_installa::after {
   content: " Installa App";
 }
 
-.af_username::after {
+.after_username::after {
   content: "  Querelle";
   color: #FFF;
 }
 
 
-/* =======    main container    ======= */
-.main-container {
+/* =======    main section    ======= */
+.main-section {
   display: flex;
   flex-flow: row wrap;
   align-content: flex-start;
@@ -188,17 +191,17 @@ su piccoli dispositivi    ======= */
   height: 70px;
   justify-content: flex-end;
   align-items: center;
-  padding: 20px;
   background-color: rgba(0, 0, 0, .5);
+  padding: 20px;
   z-index: 1;
 }
 
 .upgrade-bar button {
+  font-size: .8em;
+  text-transform: uppercase;
   padding: 8px 20px;
   border: 1px solid #FFF;
   border-radius: 100px;
-  text-transform: uppercase;
-  font-size: .8em;
 }
 
 .upgrade-bar button:hover {
@@ -206,8 +209,8 @@ su piccoli dispositivi    ======= */
 }
 
 
-/* =======    category    ======= */
-.category-music {
+/* =======    categories    ======= */
+.categories {
   display: flex;
   flex-flow: row wrap;
   height: 100%;
@@ -217,20 +220,21 @@ su piccoli dispositivi    ======= */
   width: 100%;
 }
 
-/* =======    collection    ======= */
-.text-description {
-  padding-left: 35px;
-}
-
-.text-description h3 {
-  color: grey;
-}
-
-.category-music ul {
+.categories ul {
   margin: 0;
 }
 
-.nav-category {
+
+/* =======    collection    ======= */
+.description {
+  padding-left: 35px;
+}
+
+.description h3 {
+  color: grey;
+}
+
+.nav-selector {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -238,27 +242,27 @@ su piccoli dispositivi    ======= */
   text-transform: uppercase;
 }
 
-.nav-category li {
+.nav-selector li {
   padding: 3px 4px;
   border-bottom: 3px solid #141922;
 }
 
-.nav-category li:hover {
+.nav-selector li:hover {
   border-bottom: 3px solid #35e721;
   color: #FFF;
 }
 
-.play-items {
+.collection-items {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
-  padding: 0 20px 20px 20px;
   text-align: center;
+  padding: 0 20px 20px 20px;
 }
 
-.play-items li {
-  margin: 18px 14px;
+.collection-items li {
   width: calc((100% / 6) * 1);
+  margin: 18px 14px;
 }
 
 .thumbnail {
@@ -269,8 +273,8 @@ su piccoli dispositivi    ======= */
 }
 
 .overlay:hover {
-  background-color: rgba(0, 0, 0, .5);
   color: #FFF;
+  background-color: rgba(0, 0, 0, .5);
 }
 
 .overlay {
@@ -281,40 +285,40 @@ su piccoli dispositivi    ======= */
   border-radius: inherit;
 }
 
-.overlay .fa-play-circle{
-  color: inherit;
+.overlay .fa-play-circle {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   font-size: 3em;
+  color: inherit;
+  transform: translate(-50%, -50%);
 }
 
-.coll-far img {
+.far-away img {
   border-radius: inherit;
 }
 
-.coll-far .thumbnail {
+.far-away .thumbnail {
   border-radius: 100%;
 }
 
 
-/* =======    secondary    ======= */
-.secondary-wrapper {
+/* =======    bottom    ======= */
+.bottom-wrapper {
   display: flex;
   width: 100vw;
   height: 100px;;
   background-color: #282828;
 }
 
-.track-infos {
+.track-playing {
   display:flex;
   flex-flow: row wrap;
   align-items: center;
   flex-basis: calc((100vw / 3) * 1);
 }
 
-.track-infos img {
+.track-playing img {
   width: 80px;
   height: 80px;
   margin: 0 8px 0 15px;
@@ -340,17 +344,17 @@ su piccoli dispositivi    ======= */
   align-items: baseline;
 }
 
-.bookmark {
+.bookmarks {
   display: flex;
   flex-basis: 50px;
   justify-content: space-between;
 }
 
-.playing-bar {
+.bar-wrapper {
   width: 100%;
 }
 
-.playing-bar p {
+.bar-wrapper p {
   text-align: center;
   padding-top: 6px;
   width: 100%;
@@ -374,11 +378,11 @@ su piccoli dispositivi    ======= */
   margin-right: 10px;
 }
 
-.playing-bar .green-bar {
+.bar-wrapper .green-bar {
   width: 10%;
 }
 
-.playing-bar .grey-bar {
+.bar-wrapper .grey-bar {
   width: 70%;
 }
 
@@ -410,7 +414,7 @@ su piccoli dispositivi    ======= */
   margin-right: 10px;
 }
 
-.position-bar {
+.bar-container {
   width: 20%;
 }
 
@@ -425,11 +429,11 @@ su piccoli dispositivi    ======= */
   right: -5px;
 }
 
-.position-bar:hover .pallino {
+.bar-container:hover .pallino {
   background-color: rgba(255, 255, 255, 1);
 }
 
-.position-bar:hover .green-bar {
+.bar-container:hover .green-bar {
   border-color: rgb(96, 245, 66);
 }
 
@@ -437,13 +441,13 @@ su piccoli dispositivi    ======= */
 
 /* =======    screen sm    ======= */
 @media screen and (max-width: 990px) {
-  [class*="af_"]::after {
+  [class*="after_"]::after {
     content: "";
   }
 
-  .playlists-wrap,
+  .playlists-container,
   .logo-grande,
-  .nav-column hr {
+  .navigation-column hr {
     display: none;
   }
 
@@ -457,13 +461,13 @@ su piccoli dispositivi    ======= */
     display: block;
   }
 
-  .nav-column {
+  .navigation-column {
     width: 50px;
     padding: 10px 15px;
   }
 
   .upgrade-bar,
-  .main-container {
+  .main-section {
     width: calc(100vw - 50px);
   }
 
@@ -479,8 +483,8 @@ su piccoli dispositivi    ======= */
   .top-column {
     height: calc(100vh - 200px);
   }
-  
-  .bookmark {
+
+  .bookmarks {
     display: none;
   }
 }
